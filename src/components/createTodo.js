@@ -1,6 +1,15 @@
 import editBtnHandler from '../handlers/editBtnHandler.js';
 import deleteBtnHandler from '../handlers/deleteBtnHandler.js';
 
+/**
+ * Creation of todo element with title, edit button and delete button.
+ *
+ * @param {object} item - The todo item object containing id and text
+ * @param {string} item.id - The unique id of the todo item.
+ * @param {string} item.text - The text content of the todo item.
+ * @returns {HTMLElement} - The created todo item element.
+ */
+
 const createTodo = (item) => {
     //create items
     const container = document.createElement('div');
@@ -22,7 +31,7 @@ const createTodo = (item) => {
     editBtn.innerText = 'EDIT';
 
     editBtn.addEventListener('click', () => {
-        editBtnHandler();
+        editBtnHandler(item);
     });
 
     //create delete btn
@@ -31,7 +40,7 @@ const createTodo = (item) => {
     deleteBtn.innerText = 'DELETE';
 
     deleteBtn.addEventListener('click', () => {
-        deleteBtnHandler();
+        deleteBtnHandler(item.id);
     });
 
     btnContainer.append(editBtn, deleteBtn);

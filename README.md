@@ -1,17 +1,6 @@
-# Image gallery
+# Todo List
 
-> A simple
-
-## Table of contents
-
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+> A simple website where user can add, edit and delete items.
 
 ## General info
 
@@ -20,7 +9,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/screenshot.png)
 
 ## Technologies
 
@@ -31,31 +20,27 @@
 
 ## Setup
 
-clone the repo and start using the stop watch.
+Clone the repo and run npm install.
 
 ## Code Examples
 
 ```js
+import dom from '../dom.js';
+import addItemHandler from '../handlers/addItemHandler.js';
 
+const addItemEvent = () => {
+	dom.submitBtn.addEventListener('click', (e) => {
+		addItemHandler(e);
+	});
+};
+
+export default addItemEvent;
 ```
-
-## Features
-
-List of features ready and Todos for future development
-
--
--
--
-
-To-do list:
-
--
--
 
 ## Status
 
-Project is: _in progress_
-
-## Inspiration
+Project is: _done_
 
 ## Contact
+
+[Agnieszka Dzwolak](https://github.com/Agnieszka-Dzwolak)
