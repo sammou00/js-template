@@ -18,6 +18,10 @@ const addItemHandler = (e) => {
                 dom.error.classList.remove('error-css');
             }, 2000);
         } else {
+            // Check if class coffee exists
+            const coffeeExist = document.getElementById('coffee');
+            if (coffeeExist) coffeeExist.remove();
+
             //new item - data
             const newItem = {
                 id: data.items.length + 1,
